@@ -1,0 +1,11 @@
+.navIcon {
+  width: 20px;
+  height: 20px;
+}
+
+@media (min-width: 768px) {
+  .navIcon {
+    width: 24px;
+    height: 24px;
+  }
+}
