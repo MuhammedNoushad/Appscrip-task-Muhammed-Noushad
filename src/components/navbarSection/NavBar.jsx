@@ -1,10 +1,10 @@
-import AppLogo from "../icons/AppLogo";
-import HeartIcon from "../icons/HeartIcon";
-import MenuIcon from "../icons/MenuIcon";
-import Profile from "../icons/Profile";
-import SearchIcon from "../icons/SearchIcon";
-import ShoppingBag from "../icons/ShoppingBag";
-import TopBannerIcon from "../icons/TopBannerIcon";
+import AppLogo from "../../icons/AppLogo";
+import HeartIcon from "../../icons/HeartIcon";
+import MenuIcon from "../../icons/MenuIcon";
+import Profile from "../../icons/Profile";
+import SearchIcon from "../../icons/SearchIcon";
+import ShoppingBag from "../../icons/ShoppingBag";
+import TopBannerIcon from "../../icons/TopBannerIcon";
 import styles from "./NavBar.module.css";
 
 const NavBar = () => {
