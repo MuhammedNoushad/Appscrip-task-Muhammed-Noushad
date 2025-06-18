@@ -6,7 +6,7 @@ const Filters = ({ config }) => {
     <aside className={styles.filters}>
       {config.map((filter, index) => {
         switch (filter.type) {
-          case "dropdownCheckbox":
+          case "multiSelectDropdown":
             return (
               <MultiSelectDropdown
                 label={filter.label}
@@ -15,11 +15,9 @@ const Filters = ({ config }) => {
             );
           case "checkbox":
             return (
-              <div key={index}>
-                <label>
-                  <input type="checkbox" />
-                  {filter.label}
-                </label>
+              <div key={index} className={styles.checkboxContainer}>
+                <input type="checkbox" className="checkbox" />
+                <p className={styles.label}>{filter.label}</p>
               </div>
             );
           default:

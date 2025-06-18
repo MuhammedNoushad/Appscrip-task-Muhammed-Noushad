@@ -5,29 +5,62 @@
 }
 
 .header {
-  border: 1px solid #ccc;
-  padding: 8px;
-  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 8px 0;
   cursor: pointer;
   background-color: #fff;
 }
 
+.label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: Simplon Norm;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.unselectAll {
+  color: rgba(191, 200, 205, 1);
+  font-family: Simplon Norm;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  text-decoration: underline;
+  text-decoration-style: solid;
+  text-decoration-offset: 0%;
+  text-decoration-thickness: 0%;
+  cursor: pointer;
+}
+
 .options {
-  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 24px;
+  position: relative;
   background: #fff;
-  border: 1px solid #ccc;
   width: 100%;
-  z-index: 2;
-  max-height: 200px;
   overflow-y: auto;
-  padding: 8px;
   margin-top: 4px;
-  border-radius: 4px;
+  font-family: Simplon Norm;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0px;
 }
 
 .option {
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 4px 0;
+  padding: 4px;
 }

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import DownArrow from "../../icons/DownArrow";
 import styles from "./MultiSelectDropdown.module.css";
 
 const MultiSelectDropdown = ({ label, options }) => {
@@ -15,17 +16,27 @@ const MultiSelectDropdown = ({ label, options }) => {
     }
   };
 
+  const handleUnselectAll = () => {
+    setSelectedOptions([]);
+  };
+
   return (
     <div className={styles.dropdown}>
-      <label>{label}</label>
       <div className={styles.header} onClick={toggleDropdown}>
-        {selectedOptions.length > 0
+        <div className={styles.label}>
+          <label>{label}</label>
+          <DownArrow />
+        </div>
+        {selectedOptions.length !== options.length
           ? selectedOptions.join(", ")
-          : "Select options"}
+          : "All"}
       </div>
 
       {isOpen && (
         <div className={styles.options}>
+          <a className={styles.unselectAll} onClick={handleUnselectAll}>
+            UnSelect all
+          </a>
           {options.map((option, index) => (
             <label key={index} className={styles.option}>
               <input
@@ -33,6 +44,7 @@ const MultiSelectDropdown = ({ label, options }) => {
                 value={option}
                 checked={selectedOptions.includes(option)}
                 onChange={() => handleOptionClick(option)}
+                className="checkbox"
               />
               {option}
             </label>
