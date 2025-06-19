@@ -1,0 +1,126 @@
+.footer {
+  background-color: rgba(0, 0, 0, 1);
+  color: rgba(255, 255, 255, 1);
+  padding: 50px 100px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-family: sans-serif;
+}
+
+h4 {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  vertical-align: middle;
+}
+
+p {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: 0px;
+}
+
+.topSection {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  justify-items: start;
+}
+
+.subscribeSection {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.subscribeSection h4 {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  text-transform: uppercase;
+}
+
+.subscribeSection p {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: 0px;
+}
+
+.subscribeForm {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.subscribeForm input {
+  background-color: rgba(255, 255, 255, 1);
+  color: rgba(191, 200, 205, 1);
+  padding: 10px 20px;
+  width: 384px;
+  height: 47px;
+}
+
+.subscribeForm button {
+  background-color: rgba(0, 0, 0, 1);
+  color: rgba(255, 255, 255, 1);
+  border: solid 1.14px rgba(255, 255, 255, 1);
+  width: 184px;
+  height: 48px;
+  left: 400px;
+  opacity: 0.3;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.bottomSection {
+  display: grid;
+  grid-template-columns: 30% 30% 40%;
+  justify-items: start;
+}
+
+.contactSection {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.currencyIcon {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.contactInfo,
+.currencyInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footerLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.bottomRightSection {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.icons {
+  display: flex;
+  gap: 8px;
+}
