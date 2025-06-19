@@ -1,5 +1,6 @@
 import LeftArrow from "../../icons/LeftArrow";
 import Dropdown from "../dropdown/Dropdown";
+import ProductCard from "../productCard/ProductCard";
 import Filters from "./Filters";
 import styles from "./Shop.module.css";
 
@@ -59,6 +60,64 @@ const Shop = () => {
     },
   ];
 
+  const productsDummy = [
+    {
+      id: 1,
+      name: "Product 1",
+      price: 29.99,
+      image: "/img1.jpg",
+    },
+    {
+      id: 1,
+      name: "Product 1",
+      price: 29.99,
+      image: "/img1.jpg",
+    },
+    {
+      id: 1,
+      name: "Product 1",
+      price: 29.99,
+      image: "/img1.jpg",
+    },
+    {
+      id: 1,
+      name: "Product 1",
+      price: 29.99,
+      image: "/img1.jpg",
+      wishlisted: true,
+    },
+    {
+      id: 1,
+      name: "Product 1",
+      price: 29.99,
+      image: "/img1.jpg",
+    },
+    {
+      id: 1,
+      name: "Product 1",
+      price: 29.99,
+      image: "/img1.jpg",
+    },
+    {
+      id: 1,
+      name: "Product 1",
+      price: 29.99,
+      image: "/img1.jpg",
+    },
+    {
+      id: 1,
+      name: "Product 1",
+      price: 29.99,
+      image: "/img1.jpg",
+    },
+    {
+      id: 1,
+      name: "Product 1",
+      price: 29.99,
+      image: "/img1.jpg",
+    },
+  ];
+
   const toggleFilters = () => {
     console.log("Toggle filters clicked");
   };
@@ -81,7 +140,11 @@ const Shop = () => {
       <div className={styles.content}>
         <Filters config={filterConfig} />
 
-        <div>product listing goes here</div>
+        <div className={styles.products}>
+          {productsDummy.map((product) => (
+            <ProductCard key={product.id} product={product} />
+          ))}
+        </div>
       </div>
     </section>
   );
