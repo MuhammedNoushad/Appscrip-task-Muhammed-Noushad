@@ -20,12 +20,20 @@
   display: flex;
   align-items: center;
   color: rgba(136, 135, 146, 1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  transform: translateX(0);
+  opacity: 1;
 }
 
 .content {
   display: grid;
   grid-template-columns: 20% 80%;
   gap: 20px;
+}
+
+.contentFull {
+  grid-template-columns: 1fr;
 }
 
 .filters {
@@ -54,4 +62,30 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   padding: 0 20px;
+}
+
+.productsFull {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.mobileFilters {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .header {
+    gap: 55px;
+  }
+
+  .headerLeft {
+    display: none;
+  }
+
+  .mobileFilters {
+    display: flex;
+  }
+
+  .products {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }

@@ -29,3 +29,13 @@
   text-decoration-offset: 0%;
   text-decoration-thickness: 0%;
 }
+
+@media (max-width: 768px) {
+  .productPrice {
+    font-size: 6px;
+  }
+
+  .productName {
+    font-size: 8px;
+  }
+}

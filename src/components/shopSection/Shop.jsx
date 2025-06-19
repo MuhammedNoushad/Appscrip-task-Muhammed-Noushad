@@ -1,3 +1,4 @@
+import { useState } from "react";
 import LeftArrow from "../../icons/LeftArrow";
 import Dropdown from "../dropdown/Dropdown";
 import ProductCard from "../productCard/ProductCard";
@@ -13,6 +14,8 @@ const sortOptions = [
 ];
 
 const Shop = () => {
+  const [showFilter, setShowFilter] = useState(false);
+
   const filterConfig = [
     {
       type: "checkbox",
@@ -119,7 +122,7 @@ const Shop = () => {
   ];
 
   const toggleFilters = () => {
-    console.log("Toggle filters clicked");
+    setShowFilter(!showFilter);
   };
 
   return (
@@ -130,17 +133,27 @@ const Shop = () => {
 
           <a className={styles.hideFilters} onClick={toggleFilters}>
             <LeftArrow />
-            HIDE FILTERS
+            {showFilter ? "HIDE FILTERS" : "SHOW FILTERS"}
           </a>
+        </div>
+
+        <div className={styles.mobileFilters}>
+          <strong>FILTER</strong>
         </div>
 
         <Dropdown options={sortOptions} />
       </div>
 
-      <div className={styles.content}>
-        <Filters config={filterConfig} />
+      <div
+        className={`${styles.content} ${!showFilter ? styles.contentFull : ""}`}
+      >
+        {showFilter && <Filters config={filterConfig} />}
 
-        <div className={styles.products}>
+        <div
+          className={`${styles.products} ${
+            !showFilter ? styles.productsFull : ""
+          }`}
+        >
           {productsDummy.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}
