@@ -2,12 +2,13 @@ import { useState } from "react";
 import styles from "./Dropdown.module.css";
 import DownArrow from "../../icons/DownArrow";
 
-const Dropdown = ({ options }) => {
+const Dropdown = ({ options, onSelect }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [selected, setSelected] = useState("");
 
-  const handleSelect = (option) => {
+  const handleChange = (option) => () => {
     setSelected(option);
+    onSelect(option);
     setIsOpen(false);
   };
 
@@ -27,7 +28,7 @@ const Dropdown = ({ options }) => {
             <div
               className={styles["dropdown-option"]}
               key={index}
-              onClick={() => handleSelect(option)}
+              onClick={handleChange(option)}
             >
               {option}
             </div>

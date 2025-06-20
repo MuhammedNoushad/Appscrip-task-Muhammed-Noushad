@@ -1,7 +1,7 @@
-const Paypal = () => {
+const Paypal = ({ size }) => {
   return (
     <svg
-      width="56"
+      width={size || "56"}
       height="35"
       viewBox="0 0 56 35"
       fill="none"

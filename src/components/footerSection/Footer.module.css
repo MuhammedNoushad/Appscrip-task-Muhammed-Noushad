@@ -124,3 +124,68 @@ p {
   display: flex;
   gap: 8px;
 }
+
+.contactDetails {
+  display: flex;
+  gap: 10px;
+}
+
+.divider {
+  width: 100%;
+  margin: 10px 0;
+}
+
+.dropdownSection {
+  margin-bottom: 16px;
+}
+
+.dropdownHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.dropdownContent {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 8px 0;
+  animation: fadeIn 0.3s ease;
+}
+
+.copyright {
+  display: flex;
+  justify-content: center;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    max-height: 0;
+  }
+  to {
+    opacity: 1;
+    max-height: 500px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 20px 40px;
+    text-align: left;
+  }
+
+  .topSection {
+    grid-template-columns: 100%;
+    gap: 18px;
+  }
+
+  .subscribeForm input {
+    width: 100%;
+  }
+
+  .contactSection {
+    width: 310px;
+  }
+}
