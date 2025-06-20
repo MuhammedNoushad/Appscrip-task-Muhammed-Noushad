@@ -1,12 +1,22 @@
-# React + Vite
+# 🛒 E-Commerce UI – AppScript Machine Task  
+This is a simple **frontend-only e-commerce UI** built with React and Vite for the AppScript machine task. It includes product listing, filters, sorting, wishlist, and out-of-stock indication — using mock data.  
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🔗 **Live Demo**: [https://appscrip-task-muhammed-noushad.onrender.com](https://appscrip-task-muhammed-noushad.onrender.com)  
 
-Currently, two official plugins are available:
+**Tech Stack**: React (Vite), CSS Modules, Axios, Axios Mock Adapter  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**Features**:  
+- Product grid UI  
+- Multi-select filters and checkbox  
+- Sort by price, popularity, etc.  
+- Wishlist support ❤️  
+- "Out of Stock" label  
+- Fully responsive layout  
+- Uses mock API (no backend)
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+**How to Run:**  
+```bash
+git clone https://github.com/your-username/your-repo.git  
+cd your-repo  
+npm install  
+npm run dev  
