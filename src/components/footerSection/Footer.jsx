@@ -6,7 +6,7 @@ import UnitedStates from "../../icons/UnitedStates";
 import Amex from "../../icons/Amex";
 import Paypal from "../../icons/Paypal";
 import ApplePay from "../../icons/ApplePay";
-import Opay from "../../icons/Opay";
+import Opay from "../../icons/OPay";
 import styles from "./Footer.module.css";
 import { useEffect, useState } from "react";
 import DownArrow from "../../icons/DownArrow";
